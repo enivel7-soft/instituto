@@ -165,15 +165,17 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  max-height: 50px;
+  /* max-height: 36px; */
+  margin-left: 10px;
+  /* margin-right: 8px; */
 }
 
-.header .logo svg {
+/* .header .logo svg {
   height: 32px;
   padding-right: 5px;
   color: var(--accent-color);
-}
+} */
 
 @media (max-width: 575px) {
   .header .logo svg {
