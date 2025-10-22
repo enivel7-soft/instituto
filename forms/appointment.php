@@ -6,8 +6,20 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
+  $secret = "6Lf9avMrAAAAAGTTfsVeBTAzrbW5-l6xxiDt4hXX";
+  $response = $_POST['token'];
+
+  $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}");
+  $captcha = json_decode($verify);
+
+  if ($captcha->success && $captcha->score >= 0.5) {
+      // Procesar el envío normalmente
+  } else {
+      echo "Error: verificación fallida";
+  }
+
   // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  $receiving_email_address = 'secretaria@institutodeinmunoalergia.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
