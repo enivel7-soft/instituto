@@ -3732,6 +3732,30 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Investigación section
+--------------------------------------------------------------*/
+.imginvest{
+  max-height: 100% !important;
+  width: 300px !important;
+}
+
+@media (max-width: 768px){
+  .imginvest{
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 576px){
+  .imgdiv{
+    text-align: center;
+  }
+
+  .imginvest{
+    margin-bottom: 5%;
+  }
+}
+
+/*--------------------------------------------------------------
 # Service Details 2 Section
 --------------------------------------------------------------*/
 .service-details-2 .service-image {
