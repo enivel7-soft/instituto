@@ -2484,6 +2484,7 @@ section,
   width: 100%;
   height: 400px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .about .image-section .image-grid {
@@ -2506,6 +2507,11 @@ section,
 }
 
 .about .image-section .image-grid .grid-item:hover img {
+  transform: scale(1.05);
+}
+
+.about .image-section .main-image:hover img{
+  
   transform: scale(1.05);
 }
 
@@ -4452,7 +4458,7 @@ section,
 .featured-testimonials .testimonials-slider {
   width: 100%;
   position: relative;
-  padding-bottom: 60px;
+  /*padding-bottom: 20px;*/
 }
 
 .featured-testimonials .swiper-wrapper {
@@ -4489,8 +4495,8 @@ section,
 }
 
 .featured-testimonials .testimonial-item .profile .profile-img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -4593,6 +4599,7 @@ section,
   margin-bottom: 25px;
   color: var(--default-color);
 }
+
 
 .testimonials .testimonial-item .testimonial-footer {
   display: flex;
