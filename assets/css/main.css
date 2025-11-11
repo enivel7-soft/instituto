@@ -20,7 +20,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2c3031; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #20365b; /* Color for headings, subheadings and title throughout the website */
@@ -671,7 +671,7 @@ h6 {
   transition: all 0.4s;
   border: none;        /* elimina cualquier borde */
   outline: none;       /* elimina el contorno al hacer clic */
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 .scroll-top i {
@@ -2511,7 +2511,7 @@ section,
 }
 
 .about .image-section .main-image:hover img{
-  
+
   transform: scale(1.05);
 }
 
@@ -2624,6 +2624,39 @@ section,
     max-height: 45px;
   }
 }
+
+/*-------------CARRUSEL ENLACES----------------------------*/
+.medios{padding:24px 0}
+.medios .title{ text-align:center; margin-bottom:16px }
+/* ancho razonable de cada tarjeta dentro del carrusel */
+.my-slider a{ display:block; max-width:520px; }
+/* separaciones entre tarjetas */
+.tns-item{ padding:0 8px; }
+.medios-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.medios-arrows button {
+  background: #3f6c97;        /* tu color*/
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.medios-arrows button:hover {
+  background: #305478;        /* tono un poquito más oscuro*/
+}
+
+
 
 /*--------------------------------------------------------------
 # Departments Section
