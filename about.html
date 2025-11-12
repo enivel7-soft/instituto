@@ -35,6 +35,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
 </head>
 
 <body class="about-page">
@@ -51,6 +53,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">El Instituto</a></li>
           <li><a href="services.html">Servicios</a></li>
+          <li><a href="investigacion.html">Investigación Clínica</a></li>
           <li><a href="index.html#find-a-doctor">El Equipo</a></li>
           <li><a href="contact.html">Contacto</a></li>
         </ul>
@@ -90,7 +93,7 @@
                 Nos especializamos en inmunología y alergias, combinando rigor científico con un enfoque humano que prioriza la escucha y el tratamiento individualizado.
                 Guiados por la innovación, la atención personalizada, la ética médica y el compromiso con la salud y el bienestar de cada paciente, ofrecemos soluciones clínicas actuales y basadas en evidencia.
               </p>
-            
+
               <div class="stats-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="row gy-4">
                   <div class="col-sm-6 col-lg-12 col-xl-6">
@@ -132,12 +135,95 @@
           </div>
         </div>
 
+        <!--CARRUSEL DE EL INSTITUTO EN LOS MEDIOS -->
+        <div class="page-title p-0 mb-0">
+          <div class="title-wrapper">
+            <h1 class=" fs-2">El Instituto en los Medios</h1>
+          </div>
+        </div>
+        <!-- ====== El Instituto en los Medios (carrusel de enlaces) ====== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"/>
+
+        <section class="medios mt-0 pt-0">
+          <!-- <h2 class="title">El Instituto en los Medios</h2> -->
+
+          <div class="carrusel-wrap">
+
+            <div class="my-slider">
+              <!-- Solo cambia los href -->
+              <a href="https://www.infobae.com/salud/2018/01/12/alergias-de-verano-consejos-para-prevenir-reacciones-comunes-de-la-epoca/" data-microlink target="_blank"></a>
+              <a href="https://www.lanacion.com.ar/lifestyle/la-alergia-es-considerada-epidemia-no-infecciosa-nid2175235/" data-microlink target="_blank"></a>
+              <a href="https://www.infobae.com/salud/2023/08/29/que-es-el-angioedema-hereditario-y-por-que-mas-de-la-mitad-de-los-argentinos-con-esta-condicion-vive-con-temor/" data-microlink target="_blank"></a>
+              <a href="https://www.lanacion.com.ar/sociedad/alergias-a-los-medicamentos-que-son-y-como-tratarlas-nid2039644/" data-microlink target="_blank"></a>
+              <a href="https://www.diarioel9dejulio.com.ar/noticia/18935" data-microlink target="_blank"></a>
+              <a href="https://www.infobae.com/sociedad/2019/10/06/el-extrano-caso-de-la-familia-que-heredo-una-enfermedad-genetica-inusual-y-se-entero-leyendo-una-revista-por-ahora-involucra-a-tres-generaciones/" data-microlink target="_blank"></a>
+              <a href="https://www.lanacion.com.ar/lifestyle/temporada-alergias-calles-plazas-repletas-platanos-conviene-nid2178161/" data-microlink target="_blank"></a>
+              <a href="https://www.lanacion.com.ar/sociedad/tapabocas-aliado-alergicos-arranque-primavera-nid2460168/" data-microlink target="_blank"></a>
+              <a href="https://santafe.mitelefe.com/informacion-general/dia-mundial-del-angioedema-hereditario-especialistas-recomiendan-continuar-con-los-controles-a-pesar-de-la-pandemia/" data-microlink target="_blank"></a>
+              <a href="https://www.puntal.com.ar/angioedema-hereditario/cuidadores-pacientes-angioedema-hereditario-destinan-25-dias-al-mes-asistir-su-ser-querido-n217360" data-microlink target="_blank"></a>
+            </div>
+
+          </div>
+
+          <div class="medios-arrows">
+            <button id="prevMedios" aria-label="Anterior">‹</button>
+            <button id="nextMedios" aria-label="Siguiente">›</button>
+          </div>
+
+        </section>
+
+        <script src="https://unpkg.com/microlinkjs@latest/umd/microlink.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+        <script>
+          // 1) Convierte <a data-microlink> en tarjetas con imagen/título/desc.
+          microlink('[data-microlink]', {
+            size: 'large',
+            lazy: true,
+            media: ['image','logo'] // prioriza imagen
+          });
+
+          // 2) Cuando Microlink termina de renderizar, armamos el carrusel.
+          function initWhenReady(){
+            if (document.querySelector('.my-slider .microlink_card')) {
+              const slider = tns({
+                container: '.my-slider',
+                items: 4,
+                gutter: 16,
+                slideBy: 2,
+                controls: false,
+                nav: false,
+                mouseDrag: true,
+                loop: true,
+                loopAdditionalSlides: 3,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayButtonOutput: false,
+                speed: 1000,
+                responsive: {
+                  0:    { items: 1 },
+                  341:  { items: 2 },
+                  682:  { items: 3 },
+                  1024: { items: 4 }
+                }
+              });
+
+              document.getElementById('prevMedios').addEventListener('click', () => slider.goTo('prev'));
+              document.getElementById('nextMedios').addEventListener('click', () => slider.goTo('next'));
+            } else {
+              requestAnimationFrame(initWhenReady);
+            }
+          }
+          initWhenReady();
+        </script>
+
+
+        <!--BOTONES-->
         <div class="row gy-4 ">
           <div class="col-lg-12">
             <div class="cta-buttons justify-content-center" data-aos="fade-up" data-aos-delay="300">
               <a href="index.html#find-a-doctor" class="btn-primary">Conocé nuestro equipo</a>
               <a href="services.html" class="btn-secondary">Mirá nuestros servicios</a>
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -220,9 +306,9 @@
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Instituto de InmunoAlergia Dr. Zwiener</strong> <span>All Rights Reserved</span></p>
       <!-- <div class="credits">
          All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. 
-         Licensing information: https://bootstrapmade.com/license/ 
-         Purchase the pro version with working PHP/AJAX contact form: [buy-url] 
+        <!-- You can delete the links only if you've purchased the pro version.
+         Licensing information: https://bootstrapmade.com/license/
+         Purchase the pro version with working PHP/AJAX contact form: [buy-url]
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div> -->
     </div>
@@ -251,6 +337,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
 
 </body>
 

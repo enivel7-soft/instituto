@@ -20,7 +20,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2c3031; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #20365b; /* Color for headings, subheadings and title throughout the website */
@@ -671,7 +671,7 @@ h6 {
   transition: all 0.4s;
   border: none;        /* elimina cualquier borde */
   outline: none;       /* elimina el contorno al hacer clic */
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 .scroll-top i {
@@ -2484,6 +2484,7 @@ section,
   width: 100%;
   height: 400px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .about .image-section .image-grid {
@@ -2506,6 +2507,11 @@ section,
 }
 
 .about .image-section .image-grid .grid-item:hover img {
+  transform: scale(1.05);
+}
+
+.about .image-section .main-image:hover img{
+
   transform: scale(1.05);
 }
 
@@ -2618,6 +2624,39 @@ section,
     max-height: 45px;
   }
 }
+
+/*-------------CARRUSEL ENLACES----------------------------*/
+.medios{padding:24px 0}
+.medios .title{ text-align:center; margin-bottom:16px }
+/* ancho razonable de cada tarjeta dentro del carrusel */
+.my-slider a{ display:block; max-width:520px; }
+/* separaciones entre tarjetas */
+.tns-item{ padding:0 8px; }
+.medios-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.medios-arrows button {
+  background: #3f6c97;        /* tu color*/
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.medios-arrows button:hover {
+  background: #305478;        /* tono un poquito más oscuro*/
+}
+
+
 
 /*--------------------------------------------------------------
 # Departments Section
@@ -3732,6 +3771,30 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Investigación section
+--------------------------------------------------------------*/
+.imginvest{
+  max-height: 100% !important;
+  width: 300px !important;
+}
+
+@media (max-width: 768px){
+  .imginvest{
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 576px){
+  .imgdiv{
+    text-align: center;
+  }
+
+  .imginvest{
+    margin-bottom: 5%;
+  }
+}
+
+/*--------------------------------------------------------------
 # Service Details 2 Section
 --------------------------------------------------------------*/
 .service-details-2 .service-image {
@@ -4452,7 +4515,7 @@ section,
 .featured-testimonials .testimonials-slider {
   width: 100%;
   position: relative;
-  padding-bottom: 60px;
+  /*padding-bottom: 20px;*/
 }
 
 .featured-testimonials .swiper-wrapper {
@@ -4489,8 +4552,8 @@ section,
 }
 
 .featured-testimonials .testimonial-item .profile .profile-img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -4593,6 +4656,7 @@ section,
   margin-bottom: 25px;
   color: var(--default-color);
 }
+
 
 .testimonials .testimonial-item .testimonial-footer {
   display: flex;
