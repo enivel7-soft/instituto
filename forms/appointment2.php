@@ -65,11 +65,11 @@
 
     $cuerpoMensaje = "Nombre: $nombre<br>\n";
 
-    $cuerpoMensaje .= "Teléfono: $telefono<br>\n";
+    $cuerpoMensaje .= "Telefono: $telefono<br>\n";
 
     $cuerpoMensaje .= "Email: $email<br>\n";
 
-    $cuerpoMensaje .= "Serviciol: $servicio<br>\n";
+    $cuerpoMensaje .= "Servicio: $servicio<br>\n";
 
     $cuerpoMensaje .= "Doctor: $doctor<br>\n";
 
@@ -80,9 +80,9 @@
 
     $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-    $cabeceras .= 'From: Consultas web <consultas@maximopinasco.com.ar>' . "\r\n" .
+    $cabeceras .= 'From: Consultas web <secretaria@institutodeinmunoalergia.com>' . "\r\n" .
 
-    'Reply-To: consultas@maximopinasco.com.ar' . "\r\n" .
+    'Reply-To: secretaria@institutodeinmunoalergia.com' . "\r\n" .
 
     'X-Mailer: PHP/' . phpversion();
 
@@ -94,7 +94,7 @@
 
     if ($enviado) {
 
-        header("Location: contact.html");
+        header("Location: https://institutodeinmunoalergia.com/contact.html");
 
     } 
 
